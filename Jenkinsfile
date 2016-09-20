@@ -29,3 +29,15 @@ node {
         sh "docker push velocityphil/velocitydcos:${gitCommit()}"
     }
 }
+
+    // Deploy
+    stage 'Deploy'
+
+    marathon(
+        url: 'http://marathon.mesos:8080',
+        forceUpdate: false,
+        credentialsId: 'dcos-token',
+        filename: 'marathon.json',
+        appId: 'phil-ngnix',
+        docker: "velocityphil/velocitydcos:${gitCommit()}".toString()
+    )
