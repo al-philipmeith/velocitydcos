@@ -13,7 +13,7 @@ node {
 
     // Build Docker image
     stage 'Build'
-    sh "docker build -t philipmeith/velocitydcos:${gitCommit()} ."
+    sh "docker build -t velocityphil/velocitydcos:${gitCommit()} ."
 
     // Log in and push image to GitLab
     stage 'Publish'
