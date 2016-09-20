@@ -11,7 +11,7 @@
     withCredentials(
         [[
             $class: 'UsernamePasswordMultiBinding',
-            credentialsId: 'velocityphil/velocitydcos',
+            credentialsId: 'philipmeith/velocitydcos',
             passwordVariable: 'philipm',
             usernameVariable: 'password'
         ]]
