@@ -11,9 +11,9 @@
     withCredentials(
         [[
             $class: 'UsernamePasswordMultiBinding',
-            credentialsId: 'philipmeith/velocitydcos',
-            passwordVariable: 'philipm',
-            usernameVariable: 'password'
+            credentialsId: '3c327198-7345-4f99-bbc6-20e30e64dedd',
+            passwordVariable: 'DOCKERHUB_PASSWORD',
+            usernameVariable: 'DOCKERHUB_USERNAME'
         ]]
     ) {
         sh "docker login -u ${env.DOCKERHUB_USERNAME} -p ${env.DOCKERHUB_PASSWORD} -e demo@mesosphere.com"
